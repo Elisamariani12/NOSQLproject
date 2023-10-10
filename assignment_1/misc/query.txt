@@ -1,0 +1,18 @@
+# SOLO UNA DOSE
+
+MATCH 
+    (p1:Person),
+    (v1:Vaccine)
+WHERE
+    (p1)-[:VACCINATION]->(v1) and 
+    not (p1)-[:VACCINATION {shot:1}]->(v1)<-[:VACCINATION{shot:2}]-(p1)
+RETURN p1, v1
+
+# TROVA QUELLI CHE HAN FATTO SOLO UNA/DUE DOSI (k = 1 o 2)
+v1 (Frank)
+MATCH (p:Person)-[r:VACCINATION]->(v:Vaccine) WITH p, v, count(*) AS shots WHERE shots = k RETURN p, v, shots
+                                                                                         ^
+                                                                                        cambiare per trovare tutte le dosi
+
+# ZERO DOSI
+MATCH (p:Person) WHERE not (p)-[:VACCINATION]->(:Vaccine) RETURN p

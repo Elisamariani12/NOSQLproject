@@ -1,0 +1,15 @@
+[{
+  "_id": {
+    "$oid": "61a10087b462f86b9027d18d"
+  },
+  "first_name": "Ostelvio",
+  "last_name": "De",
+  "phone_number": "+39 2978175285",
+  "birthday": {
+    "$date": {
+      "$numberLong": "-666320400000"
+    }
+  },
+  "gender": "M",
+  "fiscal_code": "DXXSLV48S20P584S"
+}]

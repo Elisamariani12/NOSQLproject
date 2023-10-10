@@ -1,0 +1,7 @@
+Ospedale
+Clinica
+Presidio Ospedialiero
+Istituto
+Complesso
+Spazio
+Stadio
